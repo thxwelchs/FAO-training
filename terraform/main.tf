@@ -3,6 +3,7 @@ module "techtalk-demo" {
   SLACK_WEBHOOK_URL = var.SLACK_WEBHOOK_URL
   file_name = data.archive_file.function.output_path
   source_hash_code = data.archive_file.function.output_base64sha256
+  ENDPOINT = var.LOCALSTACK_ENDPOINT
 }
 
 data "archive_file" "function" {

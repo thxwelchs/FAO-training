@@ -1,4 +1,4 @@
-resource "aws_iam_role" "this" {
+resource "aws_iam_role" "lambda-exec-role" {
   name = "lambda-exec-role"
   assume_role_policy = <<EOF
 {

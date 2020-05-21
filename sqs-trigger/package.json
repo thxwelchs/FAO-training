@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2"
+    "aws-sdk": "^2.681.0",
+    "axios": "^0.19.2",
+    "moment": "^2.26.0"
   }
 }

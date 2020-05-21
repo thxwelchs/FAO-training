@@ -9,3 +9,7 @@ variable "file_name" {
 variable "source_hash_code" {
   type = string
 }
+
+variable "ENDPOINT" {
+  type = string
+}

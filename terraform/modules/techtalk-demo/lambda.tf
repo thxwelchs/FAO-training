@@ -2,11 +2,13 @@ resource "aws_lambda_function" "this" {
   function_name = "SQS-trigger"
   handler = "index.handler"
   filename = var.file_name
-  role = aws_iam_role.this.arn
+  role = aws_iam_role.lambda-exec-role.arn
   runtime = "nodejs12.x"
   environment {
     variables = {
       SLACK_WEBHOOK_URL = var.SLACK_WEBHOOK_URL
+      BUCKET_NAME = aws_s3_bucket.this.bucket
+      S3_ENDPOINT = var.ENDPOINT
     }
   }
 

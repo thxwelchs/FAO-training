@@ -1,5 +1,4 @@
 describe('SNS topic publish test', () => {
-  let topicArn
   let SNS
 
   before('given AWS SDK', () => {
